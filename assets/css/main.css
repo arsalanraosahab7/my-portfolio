@@ -2352,10 +2352,10 @@ input, select, textarea {
     z-index: 9999; /* Keeps it on top of all images and sections */
     
     /* 2. The Dark Aero Glass Effect */
-    background: rgba(255, 255, 255, 0.1); /* light semi-transparent tint */
+    background: rgba(255, 255, 255, 0.2); /* light semi-transparent tint */
     backdrop-filter: blur(15px);         /* Frosted glass blur */
     -webkit-backdrop-filter: blur(15px); /* Safari compatibility */
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Subtle glossy line */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* Subtle glossy line */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
