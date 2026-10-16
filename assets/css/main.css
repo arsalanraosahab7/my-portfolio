@@ -2,8 +2,9 @@
 @import url("fontawesome-all.min.css");
 
 /*
-	Big Picture by HTML5 UP
-	html5up.net | @ajlkn
+	Edited By Najaf Rao
+	Made with love
+
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
@@ -1823,7 +1824,6 @@ input, select, textarea {
 				}
 
 		}
-
 /* Header */
 
 	#header {
@@ -2330,4 +2330,85 @@ input, select, textarea {
     text-align: center;               /* Centers the text */
     z-index: 4;
     pointer-events: none;
+}
+/* Change Hire Me submit button color */
+#contact form input[type="submit"] {
+    background-color: #3DED97; /* Change this hex code to any color you want */
+    color: #ffffff;            /* Text color */
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+/* Optional: Change the color slightly when someone hovers over it */
+#contact form input[type="submit"]:hover {
+    background-color: #e64a19; /* A darker shade for the hover effect */
+}
+/* 1. Make the header float and stick to the top */
+#header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Keeps it on top of all images and sections */
+    
+    /* 2. The Dark Aero Glass Effect */
+    background: rgba(255, 255, 255, 0.1); /* light semi-transparent tint */
+    backdrop-filter: blur(15px);         /* Frosted glass blur */
+    -webkit-backdrop-filter: blur(15px); /* Safari compatibility */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Subtle glossy line */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Make sure your main background color covers everything behind the header */
+body {
+    background-color: #121212; /* Replace with your dark background color code */
+}/* Change all header text and headings to your desired color */
+#header,
+#header h1,
+#header h2,
+#header p,
+#header span {
+    color: #FFFFFF !important; /* Change to white hex code */
+}
+
+/* Change background color of the work section */
+#work {
+    background-color: #292929 !important; /* Replace with your desired color code */
+}
+/* Change background color of the Hire Me / Contact section */
+#contact,
+#contact.main,
+#contact.secondary {
+    background-color: #292929 !important; /* Change this hex code to your preferred background color */
+}
+
+/* Optional: If the white content box inside needs to match or blend */
+#contact .box {
+    background-color: rgba(255, 255, 255, 0) !important; /* Semi-transparent box or solid color */
+    border-color: rgba(255, 255, 255, 0) !important;
+}
+/* Change "My Work" heading color to white */
+#work h2,
+.gallery-header h2,
+section h2 {
+    color: #ffffff !important;
+}
+/* Typed text color inside Name, Email, and Message fields */
+.fields input[type="text"],
+.fields input[type="email"],
+.fields textarea {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.1) !important; /* Semi-transparent dark background for contrast */
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Placeholder text color (Name, Email, Message before typing) */
+.fields input::placeholder,
+.fields textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important; /* Soft white placeholder */
 }
