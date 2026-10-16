@@ -197,4 +197,16 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            const banner = document.getElementById('success-banner');
+            if (banner) {
+                banner.style.display = 'block';
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    });
+</script>
 </html>
