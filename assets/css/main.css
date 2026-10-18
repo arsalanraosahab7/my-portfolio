@@ -2314,21 +2314,7 @@ input, select, textarea {
     display: block;
     overflow: hidden;
 }
-/* Title text centered on the thumbnail */
-.gallery .image.fit .caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centers it perfectly */
-    width: 85%;                       /* Keeps text from touching edges */
-    padding: 12px 15px;
-    color: #ffffff;
-    font-size: 1.1em;
-    font-weight: 600;
-    text-align: center;               /* Centers the text */
-    z-index: 4;
-    pointer-events: none;
-}
+
 /* Change Hire Me submit button color */
 #contact form input[type="submit"] {
     background-color: #3DED97; /* Change this hex code to any color you want */
@@ -2353,24 +2339,18 @@ input, select, textarea {
     background: rgba(255, 255, 255, 0.2); /* light semi-transparent tint */
     backdrop-filter: blur(15px);         /* Frosted glass blur */
     -webkit-backdrop-filter: blur(15px); /* Safari compatibility */
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* Subtle glossy line */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Subtle glossy line */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* 1. Reset margins and paddings at the very top of the page */
 html, body {
     margin: 0;
     padding: 0;
 }
 
-/* 2. Make sure your main background color covers everything behind the header */
-body {
-    background-color: #121212; /* Replace with your dark background color code */
-}/* Change all header text and headings to your desired color */
-#header,
-#header h1,
-#header h2,
-#header p,
-#header span {
+/* Change all header text and headings to your desired color */
+#header {
     color: #FFFFFF !important; /* Change to white hex code */
 }
 
@@ -2378,6 +2358,7 @@ body {
 #work {
     background-color: #292929 !important; /* Replace with your desired color code */
 }
+
 /* Change background color of the Hire Me / Contact section */
 #contact,
 #contact.main,
@@ -2390,6 +2371,7 @@ body {
     background-color: rgba(255, 255, 255, 0) !important; /* Semi-transparent box or solid color */
     border-color: rgba(255, 255, 255, 0) !important;
 }
+
 /* Change "My Work" heading color to white */
 #work h2,
 .gallery-header h2,
@@ -2408,5 +2390,5 @@ section h2 {
 /* Placeholder text color (Name, Email, Message before typing) */
 .fields input::placeholder,
 .fields textarea::placeholder {
-    color: rgba(255, 255, 255, 0.7) !important; /* Soft white placeholder */
+    color: rgba(255, 255, 255, 0.8) !important; /* Soft white placeholder */
 }
