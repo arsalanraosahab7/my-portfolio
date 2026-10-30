@@ -1,6 +1,4 @@
 <!DOCTYPE HTML>
-		
-
 <html>
 	<head>
 		<title>Arslan Rao | Video Editor</title>
@@ -15,32 +13,163 @@
 			<header id="header">
 				<h1>Arslan Rao | Video Editor</h1>
 					<nav id="nav">
-    						<ul>
-        						<li><a href="#intro" style="color: #F2F0EF !important;"><strong>Intro</strong></a></li>
-        						<li><a href="#one" style="color: #F2F0EF !important;"><strong>My Expertise</strong></a></li>
-        						<li><a href="#two" style="color: #F2F0EF !important;"><strong>My Experience</strong></a></li>
-        						<li><a href="#work" style="color: #F2F0EF !important;"><strong>My Work</strong></a></li>
-        						<li><a href="#contact" style="color: #F2F0EF !important;"><strong>Hire Me!</strong></a></li>
-    						</ul>
+						<ul>
+							<li><a href="#intro" style="color: #F2F0EF !important;"><strong>Intro</strong></a></li>
+							<li><a href="#work" style="color: #F2F0EF !important;"><strong>My Work</strong></a></li>
+							<li><a href="#one" style="color: #F2F0EF !important;"><strong>My Expertise</strong></a></li>
+							<li><a href="#two" style="color: #F2F0EF !important;"><strong>My Experience</strong></a></li>
+							<li><a href="#contact" style="color: #F2F0EF !important;"><strong>Hire Me!</strong></a></li>
+						</ul>
 					</nav>
 			</header>
 
 		<!-- Intro -->
 			<section id="intro" class="main style1 dark fullscreen">
-				<div class="content">
-					<header>
-						<h2>Arslan Rao | Video Editor.</h2>
-					</header>
-					<p style="font-size: 2rem; line-height: 1.8; font-weight: 400; max-width: 1000px; margin: 0 auto;">
-    I’m <strong style="font-weight: 800; color: #ffffff;">Arslan Rao</strong> , a video editor turning raw footage into powerful visual stories. I craft cinematic edits that capture attention, spark emotion, and bring your vision to life.
-</p>
-					<footer>
-						<a href="#one" class="button style2 down">More</a>
-					</footer>
+				<div class="content intro-split-container">
+					
+					<!-- Left Side: Profile Header + Intro Text -->
+					<div class="intro-text-side">
+						
+						<!-- Profile Avatar + Name Row -->
+						<div class="profile-header-row">
+							<div class="profile-avatar-wrapper">
+								<img src="images/profile.jpg" alt="Arslan Rao" class="profile-avatar-img">
+							</div>
+							<h1 class="profile-name-title">Arslan Rao</h1>
+						</div>
+
+						<!-- Text & Button Group -->
+						<div class="intro-text-content-group">
+							<header>
+								<h2 style="font-size: 2.9rem; line-height: 1.2; margin-bottom: 0px; font-weight: 700; color: #ffffff; letter-spacing: 1px;">
+									VIDEO EDITOR <span style="opacity: 0.6; font-weight: 300;">|</span> MOTION GRAPHICS
+								</h2>
+								<p style="font-size: 2.7rem; font-weight: 500; color: rgba(255,255,255,0.9); margin-bottom: 20px;">
+									Turning Ideas Into Engaging Visual Stories
+								</p>
+							</header>
+
+<!-- Glass Box for Intro Bio -->
+							<div style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%); backdrop-filter: blur(20px) saturate(120%); -webkit-backdrop-filter: blur(20px) saturate(120%); border-radius: 18px; border: 1px solid rgba(255, 255, 255, 0.35); box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 10px 30px rgba(0, 0, 0, 0.25); padding: 22px 26px; max-width: 560px; margin-bottom: 25px;">
+								<p style="font-size: 1.35rem; line-height: 1.6; font-weight: 500; color: #ffffff; margin: 0; text-align: justify;">
+									I'm a video editor with 4+ years of experience creating engaging content for creators, brands, and businesses. I specialize in clean editing, creative motion graphics, and visual storytelling that captures attention and keeps viewers engaged.
+								</p>
+							</div>
+
+							<footer>
+								<a href="#work" class="button style2 down">More</a>
+							</footer>
+						</div>
+
+					</div>
+
+<!-- Right Side: INTRODUCTION Title + Video Player -->
+					<div class="intro-video-side">
+						<h3 class="video-section-heading">INTRODUCTION</h3>
+						<div class="video-card-wrapper">
+							<!-- Added poster attribute below -->
+							<video poster="images/intro-thumb.png" preload="metadata" style="width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.6); cursor: pointer;" onclick="this.controls=true; this.play();">
+								<source src="videos/intro.mp4" type="video/mp4">
+								Your browser does not support HTML5 video.
+							</video>
+						</div>
+					</div>
+
 				</div>
 			</section>
 
-		<!-- One -->
+<!-- Work -->
+			<section id="work" class="main style3 primary">
+				<div class="content">
+					<header class="work-main-header">
+						<h2>Portfolio</h2>
+					</header>
+
+					<div class="portfolio-container">
+						
+						<!-- Item 1: Realestate -->
+						<div class="portfolio-row">
+							<div class="portfolio-text">
+								<h3>Realestate</h3>
+								<p>Property showcases and walkthroughs featuring clean transitions, cinematic pacing, music, and carefully selected shots to highlight each property's best features.</p>
+							</div>
+							<div class="portfolio-card">
+								<a href="javascript:void(0);" class="image fit video-popup-trigger" data-video="videos/realestate.mp4" data-orientation="vertical">
+									<img src="images/thumbs/01.jpg" alt="Realestate Showcase" />
+								</a>
+							</div>
+						</div>
+
+						<!-- Item 2: Shortform -->
+						<div class="portfolio-row">
+							<div class="portfolio-text">
+								<h3>Shortform</h3>
+								<p>Engaging Instagram Reels, YouTube Shorts, and social media content featuring custom captions, dynamic pacing, sound effects, and motion graphics.</p>
+							</div>
+							<div class="portfolio-card">
+								<a href="javascript:void(0);" class="image fit video-popup-trigger" data-video="videos/shortform.mp4" data-orientation="vertical">
+									<img src="images/thumbs/03.jpg" alt="Shortform Showcase" />
+								</a>
+							</div>
+						</div>
+
+						<!-- Item 3: Talking Head -->
+						<div class="portfolio-row">
+							<div class="portfolio-text">
+								<h3>Talking Head</h3>
+								<p>YouTube videos and longer content edited with a focus on storytelling, smooth pacing, audience retention, and visual consistency.</p>
+							</div>
+							<div class="portfolio-card">
+								<a href="javascript:void(0);" class="image fit video-popup-trigger" data-video="videos/talkinghead.mp4">
+									<img src="images/thumbs/02.jpg" alt="Talking Head Showcase" />
+								</a>
+							</div>
+						</div>
+
+						<!-- Item 4: Corporate -->
+						<div class="portfolio-row">
+							<div class="portfolio-text">
+								<h3>Corporate</h3>
+								<p>Creating polished and engaging corporate videos that communicate brand values, highlight company culture, and deliver clear messages to the target audience.</p>
+							</div>
+							<div class="portfolio-card">
+								<a href="javascript:void(0);" class="image fit video-popup-trigger" data-video="videos/corporate.mp4">
+									<img src="images/thumbs/04.jpg" alt="Corporate Showcase" />
+								</a>
+							</div>
+						</div>
+
+						<!-- Item 5: Motion Graphics -->
+						<div class="portfolio-row">
+							<div class="portfolio-text">
+								<h3>Motion Graphics</h3>
+								<p>Creative animations, kinetic typography, animated infographics, and visual elements that make information more engaging and easier to understand.</p>
+							</div>
+							<div class="portfolio-card">
+								<a href="javascript:void(0);" class="image fit video-popup-trigger" data-video="videos/motiongraphics.mp4" data-orientation="vertical">
+									<img src="images/thumbs/06.jpg" alt="Motion Graphics Showcase" />
+								</a>
+							</div>
+						</div>
+
+						<!-- Item 6: Advertisement -->
+						<div class="portfolio-row">
+							<div class="portfolio-text">
+								<h3>Advertisement</h3>
+								<p>Promotional content designed to showcase products, highlight key benefits, and communicate brand messages through compelling visuals.</p>
+							</div>
+							<div class="portfolio-card">
+								<a href="javascript:void(0);" class="image fit video-popup-trigger" data-video="videos/advertisement.mp4">
+									<img src="images/thumbs/05.jpg" alt="Advertisement Showcase" />
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+		<!-- One: My Expertise -->
 			<section id="one" class="main style2 right dark fullscreen">
 				<div class="content box style2" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%); backdrop-filter: blur(25px) saturate(120%); -webkit-backdrop-filter: blur(25px) saturate(120%); border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.4); box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 10px 30px rgba(0, 0, 0, 0.25); color: #ffffff;">
 
@@ -52,7 +181,7 @@
 				<a href="#two" class="button style2 down anchored">Next</a>
 			</section>
 
-		<!-- Two -->
+		<!-- Two: My Experience -->
 			<section id="two" class="main style2 left dark fullscreen">
 				<div class="content box style2" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%); backdrop-filter: blur(25px) saturate(120%); -webkit-backdrop-filter: blur(25px) saturate(120%); border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.4); box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 10px 30px rgba(0, 0, 0, 0.25); color: #ffffff;">
 
@@ -61,90 +190,41 @@
 					</header>
 					<p style="text-align: justify;">Over the past four years, I have mastered the art of visual pacing, structural storytelling, and high-end post-production. My track record spans across high-stakes property showcases and conversion-focused social media campaigns. I focus on optimizing retention metrics and maximizing viewer engagement, ensuring that every project is not just visually stunning, but strategically engineered to cut through the digital noise and elevate your brand.</p>
 				</div>
-				<a href="#work" class="button style2 down anchored">Next</a>
+				<a href="#contact" class="button style2 down anchored">Next</a>
 			</section>
 
-		<!-- Work -->
-			<section id="work" class="main style3 primary">
+		<!-- Contact -->
+			<section id="contact" class="main style3 secondary">
 				<div class="content">
 					<header>
-						<h2>My Work</h2>
-						<p style="color: #F2F0EF;"><strong>Welcome to the cutting room floor, where concepts catch fire. This gallery brings together raw momentum and sharp execution, tracking everything from high-end architectural flows to hyper-retention commercial hooks that flat-out demand attention. Pure visual leverage, hard-hitting cuts, and pacing designed to command the scroll.</strong></p>
+						<h2>Hire Me!</h2>
+						<p style="color: #F2F0EF;"><strong>Let’s bring your vision to life with creative, high-quality video edits that capture attention and make your brand stand out. Let’s work together!</strong></p>
 					</header>
+					
+					<!-- Success Banner (Hidden by default) -->
+					<div id="success-banner" style="display: none; background: #28a745; color: white; padding: 15px; border-radius: 4px; margin-bottom: 25px; text-align: center; font-weight: 600; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+						🎉 Thank you! Your message has been sent successfully. I'll get back to you soon!
+					</div>
 
-					<!-- Gallery  -->
+					<div class="box">
+						<form name="contact" method="POST" data-netlify="true" action="/?success=true">
+							<input type="hidden" name="form-name" value="contact" />
 
-                                            <!-- Gallery Section -->
-<div class="gallery">
-    <article class="from-left">
-        <a href="https://vimeo.com/1236867220" class="image fit">
-            <img src="images/thumbs/01.jpg" title="Realestate Showcase" alt="" />
-        </a>
-    </article>
-    <article class="from-right">
-        <a href="https://vimeo.com/1236886663" class="image fit">
-            <img src="images/thumbs/02.jpg" title="Talking Head Showcase" alt="" />
-        </a>
-    </article>
-    <article class="from-left">
-        <a href="https://vimeo.com/1236885402" class="image fit">
-            <img src="images/thumbs/03.jpg" title="Short Form Showcase" alt="" />
-        </a>
-    </article>
-    <article class="from-right">
-        <a href="https://vimeo.com/1235996476" class="image fit">
-            <img src="images/thumbs/04.jpg" title="Corporate Showcase" alt="" />
-        </a>
-    </article>
-    <article class="from-left">
-        <a href="https://vimeo.com/1235992179" class="image fit">
-            <img src="images/thumbs/05.jpg" title="Advertisement Showcase" alt="" />
-        </a>
-    </article>
-    <article class="from-right">
-        <a href="https://vimeo.com/1214882321" class="image fit">
-            <img src="images/thumbs/06.jpg" title="Motion Graphics Showcase" alt="" />
-        </a>
-    </article>
-	</div>
+							<div class="fields">
+								<div class="field half"><input type="text" name="name" placeholder="Name" required /></div>
+								<div class="field half"><input type="email" name="email" placeholder="Email" required /></div>
+								<div class="field"><textarea name="message" placeholder="Message" rows="6" required></textarea></div>
+							</div>
+							<ul class="actions special">
+								<li><input type="submit" value="Send Message" style="font-weight: bold;" /></li>
+							</ul>
+						</form>
+					</div>
 				</div>
 			</section>
 
-<!-- Contact -->
-<section id="contact" class="main style3 secondary">
-    <div class="content">
-        <header>
-            <h2>Hire Me!</h2>
-            <p style="color: #F2F0EF;"><strong>Let’s bring your vision to life with creative, high-quality video edits that capture attention and make your brand stand out. Let’s work together!</strong></p>
-        </header>
-<!-- Success Banner (Hidden by default) -->
-<div id="success-banner" style="display: none; background: #28a745; color: white; padding: 15px; border-radius: 4px; margin-bottom: 25px; text-align: center; font-weight: 600; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-    🎉 Thank you! Your message has been sent successfully. I'll get back to you soon!
-</div>
-        <div class="box">
-            <!-- Added name="contact" and data-netlify="true" -->
-            <form name="contact" method="POST" data-netlify="true" action="/?success=true">
-                <!-- Required hidden input for Netlify forms -->
-                <input type="hidden" name="form-name" value="contact" />
-
-                <div class="fields">
-                    <div class="field half"><input type="text" name="name" placeholder="Name" required /></div>
-                    <div class="field half"><input type="email" name="email" placeholder="Email" required /></div>
-                    <div class="field"><textarea name="message" placeholder="Message" rows="6" required></textarea></div>
-                </div>
-                <ul class="actions special">
-                   <input type="submit" value="Send Message" style="font-weight: bold;" />
-    </li>
-</ul></li>
-                </ul>
-            </form>
-        </div>
-    </div>
-</section>
-
 		<!-- Footer -->
 			<footer id="footer">
-
 				<!-- Icons -->
 					<ul class="icons">
 						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
@@ -154,9 +234,8 @@
 
 				<!-- Menu -->
 					<ul class="menu">
-						<li>&copy; All Rights Reserved</li>
+						<li>© All Rights Reserved</li>
 					</ul>
-
 			</footer>
 
 		<!-- Scripts -->
@@ -169,17 +248,69 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+<!-- Video Lightbox Modal -->
+		<div id="video-modal" class="video-modal-overlay">
+			<div class="video-modal-container">
+				<span class="video-modal-close">×</span>
+				<video id="modal-player" controls preload="metadata">
+					<source src="" type="video/mp4">
+					Your browser does not support HTML5 video.
+				</video>
+			</div>
+		</div>
 	</body>
+	<script>
+		window.addEventListener('DOMContentLoaded', (event) => {
+			const urlParams = new URLSearchParams(window.location.search);
+			if (urlParams.get('success') === 'true') {
+				const banner = document.getElementById('success-banner');
+				if (banner) {
+					banner.style.display = 'block';
+					document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+				}
+			}
+		});
+	</script>
 <script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('success') === 'true') {
-            const banner = document.getElementById('success-banner');
-            if (banner) {
-                banner.style.display = 'block';
-                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    });
+	document.addEventListener('DOMContentLoaded', () => {
+		const modal = document.getElementById('video-modal');
+		const modalContainer = document.querySelector('.video-modal-container');
+		const modalPlayer = document.getElementById('modal-player');
+		const closeBtn = document.querySelector('.video-modal-close');
+		const triggers = document.querySelectorAll('.video-popup-trigger');
+
+		triggers.forEach(trigger => {
+			trigger.addEventListener('click', (e) => {
+				e.preventDefault();
+				const videoSrc = trigger.getAttribute('data-video');
+				const isVertical = trigger.getAttribute('data-orientation') === 'vertical';
+
+				if (videoSrc) {
+					modalPlayer.src = videoSrc;
+					
+					// Adjust modal width based on video orientation
+					if (isVertical) {
+						modalContainer.classList.add('vertical-mode');
+					} else {
+						modalContainer.classList.remove('vertical-mode');
+					}
+
+					modal.classList.add('active');
+					modalPlayer.play();
+				}
+			});
+		});
+
+		const closeModal = () => {
+			modal.classList.remove('active');
+			modalPlayer.pause();
+			modalPlayer.src = '';
+		};
+
+		closeBtn.addEventListener('click', closeModal);
+		modal.addEventListener('click', (e) => {
+			if (e.target === modal) closeModal();
+		});
+	});
 </script>
 </html>

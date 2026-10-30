@@ -2392,3 +2392,290 @@ section h2 {
 .fields textarea::placeholder {
     color: rgba(255, 255, 255, 0.8) !important; /* Soft white placeholder */
 }
+/* --- Corrected Side-by-Side Intro Layout --- */
+#intro.fullscreen {
+    height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 40px 0 !important;
+}
+
+#intro .intro-split-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1600px;
+    padding: 0 50px;
+    gap: 50px;
+    box-sizing: border-box;
+}
+
+.intro-text-side {
+    flex: 1;
+    max-width: 750px;
+    text-align: left;
+}
+
+.intro-video-side {
+    flex: 1;
+    max-width: 700px;
+}
+
+.profile-header-row {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Increases the horizontal space between your picture and name */
+    margin-bottom: 20px;
+}
+
+.profile-avatar-wrapper {
+    width: 140px !important;
+    height: 140px !important;
+    min-width: 140px !important;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.profile-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+}
+
+.profile-name-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 1100px) {
+    #intro .intro-split-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+        gap: 30px;
+        overflow-y: auto;
+    }
+    
+    .profile-header-row {
+        justify-content: center;
+    }
+
+.intro-text-side {
+    flex: 1;
+    max-width: 750px;
+    text-align: left;
+    margin-top: 25px; /* Pushes the highlighted text and button lower */
+}
+
+    .intro-video-side {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    #intro.fullscreen {
+        height: auto !important;
+        min-height: 100vh;
+    }
+}
+.intro-text-content-group {
+    margin-top: 70px; /* Pushes the text and button down significantly */
+}
+/* --- Introduction Label Above Video --- */
+.video-section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 12px;
+    text-align: left;
+}
+/* --- Force tighter vertical gap between intro titles --- */
+#intro .intro-text-content-group header h2 {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: 1.1 !important;
+}
+
+#intro .intro-text-content-group header p {
+    margin-top: 2px !important; /* Adjust to 0px or -5px if you want them practically touching */
+    padding-top: 0 !important;
+}
+/* Decrease gap below profile picture & name row */
+.profile-header-row {
+    margin-bottom: 10px !important; /* Decreased from 20px/25px */
+}
+
+/* Decrease space pushing the text group down */
+.intro-text-content-group {
+    margin-top: 50px !important; /* Decreased from 70px */
+}
+/* --- Portfolio Section Custom Layout --- */
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    margin-top: 40px;
+}
+
+.portfolio-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Alternate row direction if desired, or keep uniform */
+.portfolio-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.portfolio-text {
+    flex: 1;
+    text-align: left;
+}
+
+.portfolio-text h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.portfolio-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+.portfolio-card {
+    flex: 1;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.03);
+}
+
+/* Overlay Title centered on the thumbnail */
+.card-overlay-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+    letter-spacing: 1px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 900px) {
+    .portfolio-row, .portfolio-row:nth-child(even) {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+/* --- Transparent & Blurred Lightbox Background --- */
+.video-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Reduced opacity black tint with dynamic backdrop blur */
+    background: rgba(0, 0, 0, 0.45) !important; 
+    backdrop-filter: blur(16px) saturate(120%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(120%) !important;
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-modal-overlay.active {
+    display: flex;
+}
+
+/* Glassmorphic player frame container */
+.video-modal-container {
+    position: relative;
+    width: 90%;
+    max-width: 1100px;
+    background: rgba(15, 15, 20, 0.6) !important; /* Semi-transparent dark background */
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: max-width 0.3s ease;
+}
+
+/* Slimmer max-width automatically applied ONLY when vertical-mode is active */
+.video-modal-container.vertical-mode {
+    max-width: 480px !important;
+}
+
+.video-modal-container video {
+    width: 100%;
+    height: auto;
+    max-height: 85vh;
+    display: block;
+    object-fit: cover;
+    background: #000;
+}
+
+.video-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 2.2rem;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 10001;
+    line-height: 1;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.video-modal-close:hover {
+    opacity: 1;
+}
+/* --- Force space between Portfolio header and video rows --- */
+#work .content > header {
+    margin-bottom: 100px !important; /* Increases space below the Portfolio title */
+}
+
+.portfolio-container {
+    margin-top: 100px !important; /* Increases space above the container */
+}
+
+}
