@@ -49,7 +49,7 @@
 								</p>
 							</header>
 
-<!-- Glass Box for Intro Bio -->
+							<!-- Glass Box for Intro Bio -->
 							<div style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%); backdrop-filter: blur(20px) saturate(120%); -webkit-backdrop-filter: blur(20px) saturate(120%); border-radius: 18px; border: 1px solid rgba(255, 255, 255, 0.35); box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 10px 30px rgba(0, 0, 0, 0.25); padding: 22px 26px; max-width: 560px; margin-bottom: 25px;">
 								<p style="font-size: 1.35rem; line-height: 1.6; font-weight: 500; color: #ffffff; margin: 0; text-align: justify;">
 									I'm a video editor with 4+ years of experience creating engaging content for creators, brands, and businesses. I specialize in clean editing, creative motion graphics, and visual storytelling that captures attention and keeps viewers engaged.
@@ -63,11 +63,10 @@
 
 					</div>
 
-<!-- Right Side: INTRODUCTION Title + Video Player -->
+					<!-- Right Side: INTRODUCTION Title + Video Player -->
 					<div class="intro-video-side">
 						<h3 class="video-section-heading">INTRODUCTION</h3>
 						<div class="video-card-wrapper">
-							<!-- Added poster attribute below -->
 							<video poster="images/intro-thumb.jpg" preload="metadata" style="width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.6); cursor: pointer;" onclick="this.controls=true; this.play();">
 								<source src="videos/intro.mp4" type="video/mp4">
 								Your browser does not support HTML5 video.
@@ -78,7 +77,7 @@
 				</div>
 			</section>
 
-<!-- Work -->
+		<!-- Work -->
 			<section id="work" class="main style3 primary">
 				<div class="content">
 					<header class="work-main-header">
@@ -94,7 +93,7 @@
 								<p>Property showcases and walkthroughs featuring clean transitions, cinematic pacing, music, and carefully selected shots to highlight each property's best features.</p>
 							</div>
 							<div class="portfolio-card">
-								<a href="javascript:void(0);" class="image fit video-popup-trigger" data-video="videos/realestate.mp4" data-orientation="vertical">
+								<a href="javascript:void(0);" class="image fit video-popup-trigger" data-video="videos/realestate.mp4">
 									<img src="images/thumbs/01.jpg" alt="Realestate Showcase" />
 								</a>
 							</div>
@@ -225,18 +224,26 @@
 
 		<!-- Footer -->
 			<footer id="footer">
-				<!-- Icons -->
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					</ul>
-
-				<!-- Menu -->
-					<ul class="menu">
-						<li>© All Rights Reserved</li>
-					</ul>
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+				</ul>
+				<ul class="menu">
+					<li>© All Rights Reserved</li>
+				</ul>
 			</footer>
+
+		<!-- Video Lightbox Modal (Correctly placed inside body) -->
+		<div id="video-modal" class="video-modal-overlay">
+			<div class="video-modal-container">
+				<span class="video-modal-close">×</span>
+				<video id="modal-player" controls preload="metadata">
+					<source src="" type="video/mp4">
+					Your browser does not support HTML5 video.
+				</video>
+			</div>
+		</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -248,69 +255,76 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-<!-- Video Lightbox Modal -->
-		<div id="video-modal" class="video-modal-overlay">
-			<div class="video-modal-container">
-				<span class="video-modal-close">×</span>
-				<video id="modal-player" controls preload="metadata">
-					<source src="" type="video/mp4">
-					Your browser does not support HTML5 video.
-				</video>
-			</div>
-		</div>
-	</body>
-	<script>
-		window.addEventListener('DOMContentLoaded', (event) => {
-			const urlParams = new URLSearchParams(window.location.search);
-			if (urlParams.get('success') === 'true') {
-				const banner = document.getElementById('success-banner');
-				if (banner) {
-					banner.style.display = 'block';
-					document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-				}
-			}
-		});
-	</script>
-<script>
-	document.addEventListener('DOMContentLoaded', () => {
-		const modal = document.getElementById('video-modal');
-		const modalContainer = document.querySelector('.video-modal-container');
-		const modalPlayer = document.getElementById('modal-player');
-		const closeBtn = document.querySelector('.video-modal-close');
-		const triggers = document.querySelectorAll('.video-popup-trigger');
-
-		triggers.forEach(trigger => {
-			trigger.addEventListener('click', (e) => {
-				e.preventDefault();
-				const videoSrc = trigger.getAttribute('data-video');
-				const isVertical = trigger.getAttribute('data-orientation') === 'vertical';
-
-				if (videoSrc) {
-					modalPlayer.src = videoSrc;
-					
-					// Adjust modal width based on video orientation
-					if (isVertical) {
-						modalContainer.classList.add('vertical-mode');
-					} else {
-						modalContainer.classList.remove('vertical-mode');
+		<!-- Contact Form Success Script -->
+			<script>
+				window.addEventListener('DOMContentLoaded', (event) => {
+					const urlParams = new URLSearchParams(window.location.search);
+					if (urlParams.get('success') === 'true') {
+						const banner = document.getElementById('success-banner');
+						if (banner) {
+							banner.style.display = 'block';
+							document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+						}
 					}
+				});
+			</script>
 
-					modal.classList.add('active');
-					modalPlayer.play();
-				}
-			});
-		});
+		<!-- Video Popup Modal Script (Stops previous videos automatically) -->
+			<script>
+				document.addEventListener('DOMContentLoaded', () => {
+					const modal = document.getElementById('video-modal');
+					const modalContainer = document.querySelector('.video-modal-container');
+					const modalPlayer = document.getElementById('modal-player');
+					const closeBtn = document.querySelector('.video-modal-close');
+					const triggers = document.querySelectorAll('.video-popup-trigger');
 
-		const closeModal = () => {
-			modal.classList.remove('active');
-			modalPlayer.pause();
-			modalPlayer.src = '';
-		};
+					const stopCurrentVideo = () => {
+						if (!modalPlayer.paused) {
+							modalPlayer.pause();
+						}
+						modalPlayer.currentTime = 0;
+						modalPlayer.src = '';
+						modalPlayer.load();
+					};
 
-		closeBtn.addEventListener('click', closeModal);
-		modal.addEventListener('click', (e) => {
-			if (e.target === modal) closeModal();
-		});
-	});
-</script>
+					triggers.forEach(trigger => {
+						trigger.addEventListener('click', (e) => {
+							e.preventDefault();
+							stopCurrentVideo();
+
+							const videoSrc = trigger.getAttribute('data-video');
+							const isVertical = trigger.getAttribute('data-orientation') === 'vertical';
+
+							if (videoSrc) {
+								if (isVertical) {
+									modalContainer.classList.add('vertical-mode');
+								} else {
+									modalContainer.classList.remove('vertical-mode');
+								}
+
+								modalPlayer.src = videoSrc;
+								modal.classList.add('active');
+								modalPlayer.play().catch(err => console.log("Autoplay prevented:", err));
+							}
+						});
+					});
+
+					const closeModal = () => {
+						stopCurrentVideo();
+						modal.classList.remove('active');
+					};
+
+					closeBtn.addEventListener('click', closeModal);
+					modal.addEventListener('click', (e) => {
+						if (e.target === modal) closeModal();
+					});
+
+					document.addEventListener('keydown', (e) => {
+						if (e.key === 'Escape' && modal.classList.contains('active')) {
+							closeModal();
+						}
+					});
+				});
+			</script>
+	</body>
 </html>
