@@ -270,6 +270,7 @@
 			</script>
 
 		<!-- Video Popup Modal Script (Stops previous videos automatically) -->
+			<!-- Video Popup Modal Script (Stops ALL page videos and resets modal) -->
 			<script>
 				document.addEventListener('DOMContentLoaded', () => {
 					const modal = document.getElementById('video-modal');
@@ -278,19 +279,24 @@
 					const closeBtn = document.querySelector('.video-modal-close');
 					const triggers = document.querySelectorAll('.video-popup-trigger');
 
-					const stopCurrentVideo = () => {
-						if (!modalPlayer.paused) {
-							modalPlayer.pause();
+					// Function to pause and stop EVERY video element on the entire page
+					const stopAllPageVideos = () => {
+						document.querySelectorAll('video').forEach(vid => {
+							vid.pause();
+							vid.currentTime = 0;
+						});
+						if (modalPlayer) {
+							modalPlayer.src = '';
+							modalPlayer.load();
 						}
-						modalPlayer.currentTime = 0;
-						modalPlayer.src = '';
-						modalPlayer.load();
 					};
 
 					triggers.forEach(trigger => {
 						trigger.addEventListener('click', (e) => {
 							e.preventDefault();
-							stopCurrentVideo();
+							
+							// Stop everything currently playing on the site
+							stopAllPageVideos();
 
 							const videoSrc = trigger.getAttribute('data-video');
 							const isVertical = trigger.getAttribute('data-orientation') === 'vertical';
@@ -310,7 +316,7 @@
 					});
 
 					const closeModal = () => {
-						stopCurrentVideo();
+						stopAllPageVideos();
 						modal.classList.remove('active');
 					};
 
