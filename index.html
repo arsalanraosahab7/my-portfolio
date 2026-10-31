@@ -269,8 +269,7 @@
 				});
 			</script>
 
-		<!-- Video Popup Modal Script (Stops previous videos automatically) -->
-			<!-- Video Popup Modal Script (Stops ALL page videos and resets modal) -->
+<!-- Video Popup Modal Script (Fully resets page videos & intro state) -->
 			<script>
 				document.addEventListener('DOMContentLoaded', () => {
 					const modal = document.getElementById('video-modal');
@@ -279,11 +278,13 @@
 					const closeBtn = document.querySelector('.video-modal-close');
 					const triggers = document.querySelectorAll('.video-popup-trigger');
 
-					// Function to pause and stop EVERY video element on the entire page
+					// Function to completely reset page videos back to their initial unplayed state
 					const stopAllPageVideos = () => {
 						document.querySelectorAll('video').forEach(vid => {
 							vid.pause();
 							vid.currentTime = 0;
+							vid.controls = false; // Hides player controls to restore the pristine initial look
+							vid.load();          // Reloads metadata to bring back the poster thumbnail
 						});
 						if (modalPlayer) {
 							modalPlayer.src = '';
@@ -295,7 +296,7 @@
 						trigger.addEventListener('click', (e) => {
 							e.preventDefault();
 							
-							// Stop everything currently playing on the site
+							// Stop and reset everything on the site before opening the modal
 							stopAllPageVideos();
 
 							const videoSrc = trigger.getAttribute('data-video');
