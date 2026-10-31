@@ -2669,13 +2669,28 @@ section h2 {
 .video-modal-close:hover {
     opacity: 1;
 }
-/* --- Force space between Portfolio header and video rows --- */
-#work .content > header {
-    margin-bottom: 100px !important; /* Increases space below the Portfolio title */
-}
 
-.portfolio-container {
-    margin-top: 100px !important; /* Increases space above the container */
-}
 
+/* --- Mobile View Clean Up --- */
+@media screen and (max-width: 736px) {
+    /* Fix text overlapping on mobile */
+    #intro .intro-text-content-group h2 {
+        font-size: 1.5rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    #intro .intro-text-content-group p {
+        font-size: 1.3rem !important;
+        line-height: 1.2 !important;
+    }
+
+    /* Reset desktop negative margins on mobile */
+    #intro .intro-text-side {
+        margin-top: 0 !important;
+    }
+    
+    #intro .intro-video-side .video-section-heading {
+        margin-top: 30px !important;
+    }
+}
 }
